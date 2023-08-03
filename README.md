@@ -1,2 +1,5 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Para rodar a calculadora basta executar o comando:
+
+dart run 
+
+e informar o nome, peso e altura.
