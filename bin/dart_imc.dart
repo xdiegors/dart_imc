@@ -1,7 +1,8 @@
 import 'dart:io';
 import 'package:dart_imc/models/pessoa.dart';
+import 'package:dart_imc/calcular_imc.dart';
 
-void main(List<String> arguments) {
+void main() {
   Pessoa pessoa = Pessoa();
 
   print("Digite seu nome:");
@@ -19,13 +20,7 @@ void main(List<String> arguments) {
   if (altura != null) {
     pessoa.setAltura(double.tryParse(altura));
   }
-  double imc;
-
-  double calcularImc(double? peso, double? altura) {
-    imc = pessoa.getPeso() / (pessoa.getAltura() * pessoa.getAltura());
-    return imc;
-  }
 
   print(
-      "${pessoa.getNome()} seu IMC é: ${calcularImc(pessoa.getPeso(), pessoa.getAltura())}");
+      "Olá ${pessoa.getNome()}, seu IMC é: ${calcularImc(pessoa.getPeso(), pessoa.getAltura())}");
 }
